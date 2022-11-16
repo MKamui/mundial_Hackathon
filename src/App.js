@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route } from "react-router-dom";
 import './App.css';
+import Home from './components/Home';
+import SignIn from './components/SignIn';
+import CreateAccount from './components/CreateAccount'
+import AuthContextProvider from './context/AuthContext';
+import PageNotFound from './components/PageNotFound'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AuthContextProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn/>} />
+          <Route path="/createaccount" element={<CreateAccount/>} />
+          <Route path='*' element={<PageNotFound/>}/>
+        </Routes>
+      </AuthContextProvider>
     </div>
   );
 }
