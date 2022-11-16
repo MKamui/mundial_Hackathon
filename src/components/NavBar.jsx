@@ -4,6 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
+import '../css/NavBar.css';
+
 
 const NavBar = () => {
   return (
@@ -17,7 +19,7 @@ const NavBar = () => {
           <Link to="/">Home</Link>
           </Nav.Link>
           <NavDropdown title="Instancias" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Fase de Grupos</NavDropdown.Item>
+            <NavDropdown.Item href="/fasedegrupos">Fase de Grupos</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
               Octavos de Final
             </NavDropdown.Item>
