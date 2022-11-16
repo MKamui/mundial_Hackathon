@@ -10,6 +10,7 @@ import PageNotFound from './components/PageNotFound'
 function App() {
   return (
     <div>
+      
       <AuthContextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
