@@ -1,3 +1,7 @@
+import Home from './components/Home/Home';
+import {Route} from "react-router-dom"
+import './App.css';
+import NavH from './components/Home/Nav';
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import './App.css';
