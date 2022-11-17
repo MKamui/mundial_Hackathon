@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
 import Swal from "sweetalert2";
+import "../css/login.css";
 
 const SignIn = () => {
   const [userAccount, setUser] = useState({
@@ -10,24 +11,8 @@ const SignIn = () => {
   })
   const navigate = useNavigate()
   const {signIn} = UserAuth()
-  const {googleSignIn} = UserAuth()
   const handleChanges = (e) => {
     setUser({ ...userAccount, [e.target.name]: e.target.value });
-  }
-
-  const handleGoogleSignIn = async () => {
-    try {
-      await Swal.fire({
-        icon: 'success',
-        title: 'Welcome Google User!',
-        showConfirmButton: false,
-        timer: 2000
-      })
-      await googleSignIn()
-      navigate('/account')
-    } catch (error) {
-      console.log(error)
-    }
   }
 
   const handleSubmit = async (e) => {
@@ -74,13 +59,13 @@ const SignIn = () => {
   }
 
   return (
-    <div>
+    <div className="general">
       <div>
         <div>
           <h1>Sign in to your profile</h1>
           <p>Don't have an account yet? <Link to='/createaccount'>Create account.</Link></p>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form>
           <div>
             <label>Email Address:</label>
             <input name='email' onChange={handleChanges} type="email" />
@@ -89,10 +74,9 @@ const SignIn = () => {
             <label>Password:</label>
             <input name='password' onChange={handleChanges} type="password" />
           </div>
-          <button className='w-full py-4 my-2'>Sign In</button>
-          <Link to='/forget'><button>Forget password?</button></Link>
         </form>
-        <button onClick={handleGoogleSignIn} >Google Sign In</button>
+          <button onClick={handleSubmit} className='boton'>Sign In</button>
+          <Link to='/forget'><button className='boton'>Forget password?</button></Link>
       </div>
     </div>
   )

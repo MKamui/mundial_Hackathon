@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
 import Swal from "sweetalert2"
+import '../css/login.css'
 
 const CreateAccount = () => {
   const [user, setUser] = useState({
@@ -63,12 +64,12 @@ const CreateAccount = () => {
   }
 
   return (
-    <div>
+    <div className='general'>
       <div>
         <h1>Create an account</h1>
         <p>Already have an account? <Link to='/signin'>Sign in.</Link></p>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form>
         <div>
           <label>Email Address:</label>
           <input name='email' onChange={handleChanges} type="email" />
@@ -77,9 +78,9 @@ const CreateAccount = () => {
           <label>Password:</label>
           <input name='password' onChange={handleChanges} type="password" />
         </div>
-        <button>Create account</button>
-        <Link to='/'><button>Back SignIn</button></Link>
       </form>
+      <button onClick={handleSubmit} className="boton">Create account</button>
+      <Link to='/'><button className="boton">Back SignIn</button></Link>
     </div>
   )
 }
