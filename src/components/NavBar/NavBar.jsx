@@ -15,17 +15,20 @@ function NavBar() {
           <Nav className="me-auto">
             <Link to="/home">Home</Link>
             <Nav.Link href="#pricing">Contacto</Nav.Link>
-           <NavDropdown title="Equipo" id="basic-nav-dropdown" className='drop'>
+           <NavDropdown title="Instancias" id="basic-nav-dropdown" className='drop'>
             <NavDropdown.Item href="/fasedegrupos"><p>Fase de Grupos</p></NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2"><p>Octavos de Final</p></NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3"><p>Cuartos de Final</p></NavDropdown.Item>
             <NavDropdown.Item href="#action/3.4"><p>Semifinal</p></NavDropdown.Item>
             <NavDropdown.Item href="#action/3.4"><p>Final</p></NavDropdown.Item>
           </NavDropdown>
+          <NavDropdown title="Equipos" id="basic-nav-dropdown" className='drop'>
+            <NavDropdown.Item href="/fasedegrupos"><p>Argentina</p></NavDropdown.Item>
+          </NavDropdown>
           </Nav>
           <Nav>
             <Link to="/signin">Sign In</Link>
-            <Link to="#memes">Sign up</Link>
+            <Link to="/createaccount">Sign up</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
