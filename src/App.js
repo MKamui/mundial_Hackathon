@@ -2,7 +2,11 @@ import "./App.css";
 import Error from "./components/Error";
 
 function App() {
-  let data = "Error";
+  let data = {
+    status: 403,
+    description: "Error",
+  };
+  
   return (
     <div className="App">
       <Error error={data} />
