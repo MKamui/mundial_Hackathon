@@ -10,14 +10,14 @@ import AuthContextProvider from './context/AuthContext';
 import PageNotFound from './components/PageNotFound'
 import ForgetPassword from './components/ForgetPassword'
 import Account from './components/Account';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import FaseDeGrupos from './components/FaseDeGrupos';
 
 function App() {
   return (
     <div>
       <AuthContextProvider>
-        <NavBar />
+        <NavBar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn/>} />
