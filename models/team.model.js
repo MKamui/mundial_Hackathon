@@ -10,7 +10,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+
+      Team.belongsToMany(models.User, {
+        through: models.Vote,
+        foreignKey: 'user_id',
+        otherKey: 'team_id',
+        timestamps: false,
+      });
+
     }
   }
   Team.init({

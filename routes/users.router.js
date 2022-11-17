@@ -7,22 +7,21 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
 
-  // const users = await User.findAll();
-
-  // console.log(users.every(user => user instanceof User)); // true
-
-  const votes = User.belongsToMany(Team, {
-    through: 'Vote',
-    foreignKey: 'user_id',
-    otherKey: 'team_id'
+  const users = await User.findAll({
+    include: [Team]
+  }).then((res) => {
+    console.log(res);
   });
+
+
+
 
 
 
   // console.log(votes); // true
 
 
-  res.send(votes);
+  // res.json(votes);
   //const userTest = userModel.findAll();
 });
 

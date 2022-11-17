@@ -12,7 +12,17 @@ module.exports = {
       name: Sequelize.DataTypes.STRING,
       group_id:Sequelize.DataTypes.INTEGER,
       fifa_code: Sequelize.DataTypes.STRING,
-      flag: Sequelize.DataTypes.STRING
+      flag: Sequelize.DataTypes.STRING,
+
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      }
+
     });
 
   },
