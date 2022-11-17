@@ -1,7 +1,7 @@
 const express = require('express');
 
 const teamsRouter = require('./teams.router');
-
+const votesRouter = require('./votes.router');
 // const productsRouter = require('./products.router');
 // const categoriesRouter = require('./categories.router');
 const usersRouter = require('./users.router');
@@ -16,6 +16,7 @@ function routerApi(app) {
   // Busque el archivo teamsRouter.js
   app.use('/api/teams', teamsRouter);
   app.use('/api/users', usersRouter);
+  app.use('/votes', votesRouter);
 
 
   // router.use('/products', productsRouter);

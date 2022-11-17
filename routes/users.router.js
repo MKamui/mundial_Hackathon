@@ -25,5 +25,7 @@ router.get('/', async (req, res) => {
   //const userTest = userModel.findAll();
 });
 
+router.get('search')
+
 
 module.exports = router;

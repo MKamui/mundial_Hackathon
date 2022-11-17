@@ -17,6 +17,7 @@ module.exports = {
           fifa_code: teams[i].Codigo_Fifa,
           flag: teams[i].Bandera,
           group_id: teams[i].Grupo
+
         });
 
 
