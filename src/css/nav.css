@@ -6,9 +6,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:rgb(77, 23, 23);
+    background-color: blueviolet;
     box-shadow: 0 5px 10px 	#032c61
 } 
-.bg-light{
-    background-color: black;
+
+.navbar-collapse{
+    flex-grow: 0;
 }

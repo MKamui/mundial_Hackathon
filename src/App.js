@@ -1,5 +1,7 @@
 import './App.css';
 import React from 'react';
+import './App.css';
+import Footer from "./components/Footer/Footer";
 import {Route, Routes} from "react-router-dom";
 import Home from './components/Home/Home';
 import SignIn from './components/SignIn';
@@ -25,6 +27,7 @@ function App() {
           <Route path='*' element={<PageNotFound/>}/>
           <Route path='/fasedegrupos' element={<FaseDeGrupos />}/>
         </Routes>
+        <Footer/>
       </AuthContextProvider>
     </div>
   );

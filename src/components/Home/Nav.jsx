@@ -8,12 +8,12 @@ import { Link } from 'react-router-dom';
 export default function NavH() {
   return (
     <nav>
-        <Navbar bg="light" expand="lg" className='Nav nav_hack'>
+        <Navbar expand="lg" className='Nav nav_hack'>
             <Container>
                 <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
+                <Nav>
                     <Nav.Link to="/casa">Home</Nav.Link>
                     <Nav.Link href="#link">Link</Nav.Link>
                     <NavDropdown title="Dropdown" id="basic-nav-dropdown">
