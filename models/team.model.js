@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     },
 
     name: DataTypes.STRING,
-    group_id:DataTypes.INTEGER,
+    group_id:DataTypes.STRING,
     fifa_code: DataTypes.STRING,
     flag: DataTypes.STRING
 

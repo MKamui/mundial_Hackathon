@@ -16,7 +16,7 @@ module.exports = {
           name: teams[i].Nombre,
           fifa_code: teams[i].Codigo_Fifa,
           flag: teams[i].Bandera,
-          group: teams[i].Grupo
+          group_id: teams[i].Grupo
         });
 
 
