@@ -10,7 +10,7 @@ module.exports = {
       },
 
       name: Sequelize.DataTypes.STRING,
-      group_id:Sequelize.DataTypes.INTEGER,
+      group_id: Sequelize.DataTypes.STRING,
       fifa_code: Sequelize.DataTypes.STRING,
       flag: Sequelize.DataTypes.STRING,
 
