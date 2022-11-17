@@ -1,17 +1,17 @@
 const express = require('express');
 
+const { User } = require('../models/index');
+
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  const { limit, offset } = req.query;
-  if (limit && offset) {
-    res.json({
-      limit,
-      offset
-    });
-  } else {
-    res.send('No hay parametros');
-  }
+
+router.get('/', async (req, res) => {
+
+  const users = await User.findAll();
+  console.log(users.every(user => user instanceof User)); // true
+
+  res.send(users);
+  //const userTest = userModel.findAll();
 });
 
 

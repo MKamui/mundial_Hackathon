@@ -8,13 +8,13 @@ const routerApi = require('./routes');
 const { logErrors, errorHandler, boomErrorHandler } = require('./middlewares/error.handler');
 
 const app = express();
-const port = 3000;
+const port = 3030;
 
 //middleware para que todas las peticiones se parseen a JSON
 app.use(express.json());
 
 //Lista de urls permitidas para solucionar el problema de cors headers
-const whitelist = ['http://localhost:8080', 'https://myapp.co'];
+const whitelist = ['http://localhost:8080', 'https://myapp.co', 'http://localhost:3030'];
 
 //configuracion del cors
 const options = {
@@ -22,7 +22,9 @@ const options = {
     if (whitelist.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error('no permitido'));
+      callback(null, true);
+
+      //callback(new Error('no permitido'));
     }
   }
 }

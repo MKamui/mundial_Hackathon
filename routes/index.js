@@ -4,7 +4,7 @@ const teamsRouter = require('./teams.router');
 
 // const productsRouter = require('./products.router');
 // const categoriesRouter = require('./categories.router');
-// const usersRouter = require('./users.router');
+const usersRouter = require('./users.router');
 
 function routerApi(app) {
   const router = express.Router();
@@ -15,6 +15,7 @@ function routerApi(app) {
   // En este caso, las derivadas están en teamsRouter.
   // Busque el archivo teamsRouter.js
   app.use('/api/teams', teamsRouter);
+  app.use('/api/users', usersRouter);
 
 
   // router.use('/products', productsRouter);
