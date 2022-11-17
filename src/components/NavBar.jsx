@@ -9,18 +9,18 @@ import '../css/NavBar.css';
 
 const NavBar = () => {
   return (
-    <Navbar bg="light" expand="lg">
-    <Container>
-      <Navbar.Brand href="/">Prode Mundial</Navbar.Brand>
+    <div>
+    <Navbar className='contenedor' expand="lg">
+    <Container >
+      <Navbar.Brand className="titulo" href="/">Prode Mundial</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link>
+          
           <Link to="/">Home</Link>
-          </Nav.Link>
           <NavDropdown title="Instancias" id="basic-nav-dropdown">
             <NavDropdown.Item href="/fasedegrupos">Fase de Grupos</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
+            <NavDropdown.Item href="/octavos">
               Octavos de Final
             </NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">Cuartos de Final</NavDropdown.Item>
@@ -39,6 +39,7 @@ const NavBar = () => {
       </Navbar.Collapse>
     </Container>
   </Navbar>
+  </div>
   )
 }
 

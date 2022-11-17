@@ -12,6 +12,7 @@ import ForgetPassword from './components/ForgetPassword'
 import Account from './components/Account';
 import NavBar from './components/NavBar';
 import FaseDeGrupos from './components/FaseDeGrupos';
+import OctavosDeFinal from './components/OctavosDeFinal';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/account' element={<Account/>} />
           <Route path='*' element={<PageNotFound/>}/>
           <Route path='/fasedegrupos' element={<FaseDeGrupos />}/>
+          <Route path='/octavos' element={<OctavosDeFinal/>}/>
         </Routes>
         <Footer/>
       </AuthContextProvider>
