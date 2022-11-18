@@ -15,6 +15,26 @@ router.get('/', async (req, res) => {
   // const products = await service.find();
   // res.json(products);
 });
+
+router.get('/team-vs-team', async (req, res) => {
+
+  const { team1, team2 } = req.query;
+
+  if (req.team1 == null || req.team2 == null || req.team1 == "" || req.team2 == "" ) {
+    res.send('noooo');
+  }
+
+  res.json({
+    team1,
+    team2
+  })
+
+
+  // const products = await service.find();
+  // res.json(products);
+});
+
+
 // Estas son las subrutas que se desprenden de /api/teams
 // Quedarían como /api/teams/filter, y así sucesivamente
 router.get('/filter', (req, res) => {

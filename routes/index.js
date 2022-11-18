@@ -14,7 +14,7 @@ function routerApi(app) {
   // Registramos la ruta principal para conectar con la derivadas de esta.
   // En este caso, las derivadas están en teamsRouter.
   // Busque el archivo teamsRouter.js
-  app.use('/api/teams', teamsRouter);
+  app.use('/teams', teamsRouter);
   app.use('/api/users', usersRouter);
   app.use('/votes', votesRouter);
 
