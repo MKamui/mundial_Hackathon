@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { Team } = require('../models');
+const { Team, Match } = require('../models');
 
 
 const validatorHandler = require('./../middlewares/validator.handler');
@@ -32,6 +32,34 @@ router.get('/', async (req, res) => {
 
 });
 
+router.get('/games-of-this-team', async (req, res) => {
+
+  const { id } = req.query;
+
+  let matchesAsHost = await Match.findAll({ where: { home: id } });
+  let matchesAsVisitor = await Match.findAll({ where: { visitor: id } });
+
+  res.json({
+      "status":200,
+      "message":"Estos son los partidos de este equipo",
+
+      "data":{
+          "matches":{
+            matchesAsHost,
+            matchesAsVisitor
+          }
+      },
+
+
+  });
+
+
+
+
+});
+
+
+
 router.get('/team-vs-team', async (req, res) => {
 
   const { team1, team2 } = req.query;
@@ -60,18 +88,23 @@ router.get('/filter', (req, res) => {
   res.send('Yo soy un filter');
 });
 
-router.get('/:id',
-  validatorHandler(getProductSchema, 'params'),
-  async (req, res, next) => {
-    try {
-      const { id } = req.params;
-      const product = await service.findOne(id);
-      res.json(product);
-    } catch (error) {
-      next(error);
-    }
-  }
-);
+router.get('/:id', async (req, res)=>{
+  const { id } = req.params;
+  await Team.findByPk(id)
+  .then(data => {
+
+    res.json({
+        "status":200,
+        "message":"Equipo",
+
+        "data":{
+            "team":data,
+        }
+
+      })
+
+  });
+});
 
 router.post('/',
   validatorHandler(createProductSchema, 'body'),
