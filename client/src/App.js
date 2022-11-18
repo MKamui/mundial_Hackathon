@@ -13,6 +13,8 @@ import NavBar from './components/NavBar/NavBar';
 import FaseDeGrupos from './components/FaseDeGrupos';
 import Protected from './components/Protected'
 import Team from './components/Team';
+import Teams from './components/Teams/Teams';
+import Detail from './components/detalle/detalle';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path='*' element={<PageNotFound/>}/>
           <Route path='/fasedegrupos' element={<FaseDeGrupos />}/>
           <Route path='/team' element={<Team />}/>
+          <Route path='/equipos' element={<Teams />}/>
+          {/* <Route path='/detail/:id' component={Detail}/> */}
         </Routes>
         <Footer/>
       </AuthContextProvider>
