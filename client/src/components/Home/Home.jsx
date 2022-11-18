@@ -2,6 +2,7 @@ import React from "react";
 import ControlledCarousel from "./Carousel";
 import Info from "./Info";
 import "../../css/home.css";
+import Teams from "../Teams/Teams";
 
 export default function Home(){
     return(

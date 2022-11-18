@@ -60,18 +60,30 @@ router.get('/filter', (req, res) => {
   res.send('Yo soy un filter');
 });
 
-router.get('/:id',
-  validatorHandler(getProductSchema, 'params'),
-  async (req, res, next) => {
-    try {
-      const { id } = req.params;
-      const product = await service.findOne(id);
-      res.json(product);
-    } catch (error) {
-      next(error);
-    }
-  }
-);
+// router.get('/:id',
+//   validatorHandler(getProductSchema, 'params'),
+//   async (req, res, next) => {
+//     try {
+//       const { id } = req.params;
+//       const product = await service.findOne(id);
+//       res.json(product);
+//     } catch (error) {
+//       next(error);
+//     }
+//   }
+// );
+
+router.get('/:id', async (req,res)=>{
+  const id=req.params.id;
+  const teamTotal=await Team.findAll
+  console.log(teamTotal)
+  // if (id) {
+  //     let breedId= teamTotal.filter(a=>a.id==id)
+  //     breedId.length?
+  //     res.status(200).json(breedId):
+  //     res.status(404).send('No lo encontre')
+  // }
+})
 
 router.post('/',
   validatorHandler(createProductSchema, 'body'),

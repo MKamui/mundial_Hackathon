@@ -14,16 +14,8 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Link to="/">Home</Link>
-           <NavDropdown title="Instancias" id="basic-nav-dropdown" className='drop'>
-            <NavDropdown.Item href="/fasedegrupos"><p>Fase de Grupos</p></NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2"><p>Octavos de Final</p></NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3"><p>Cuartos de Final</p></NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.4"><p>Semifinal</p></NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.4"><p>Final</p></NavDropdown.Item>
-          </NavDropdown>
-          <NavDropdown title="Equipos" id="basic-nav-dropdown" className='drop'>
-            <NavDropdown.Item href="/fasedegrupos"><p>Argentina</p></NavDropdown.Item>
-          </NavDropdown>
+            <Link to="/fasedegrupos">Grupos</Link>
+            <Link to="/equipos">Equipos</Link>
           </Nav>
           <Nav>
             <Link to="/account">Cuenta</Link>
