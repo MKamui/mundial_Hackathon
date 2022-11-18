@@ -13,6 +13,7 @@ import ForgetPassword from './components/ForgetPassword'
 import Account from './components/Account';
 import NavBar from './components/NavBar/NavBar';
 import FaseDeGrupos from './components/FaseDeGrupos';
+import OctavosDeFinal from './components/OctavosDeFinal';
 import Protected from './components/Protected'
 import Team from './components/Team';
 import Teams from './components/Teams/Teams';
@@ -36,6 +37,7 @@ function App() {
           <Route exact path='/account' element={<Protected><Account/></Protected>} />
           <Route path='*' element={<PageNotFound/>}/>
           <Route path='/fasedegrupos' element={<FaseDeGrupos />}/>
+          <Route path='/octavos' element={<OctavosDeFinal/>}/>
           <Route path='/team' element={<Team />}/>
           <Route path='/equipos' element={<Teams />}/>
           {/* <Route path='/detail/:id' component={Detail}/> */}
