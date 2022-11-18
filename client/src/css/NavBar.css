@@ -1,0 +1,25 @@
+.navH{
+    width: 100%;
+    height: 10%;
+    min-height: 0%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d52929ce;
+}
+.navH a{
+    padding: 15px;
+    text-decoration: none;
+    padding-top: 10px;
+    color: white;
+}
+.navH a:hover{
+    color: rgb(56, 28, 28);
+}
+.drop a{
+    color: rgb(255, 255, 255);
+}
+.drop a p{
+    color: black;
+}
