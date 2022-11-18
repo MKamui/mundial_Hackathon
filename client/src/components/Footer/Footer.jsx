@@ -24,7 +24,7 @@ export default function Footer(){
                 <div>
                     <div>
                     <h4>¿Quiénes somos?</h4>
-                    <i class="fa fa-users"></i>
+                    <i className="fa fa-users"></i>
                     </div>
                     <div className={style.footer_content}>
                         <p><Link to="/team">El equipo</Link></p>
