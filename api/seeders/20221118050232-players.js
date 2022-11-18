@@ -15,16 +15,16 @@ module.exports = {
       while (true) {
         try {
           if (team.Arqueros.length > 0) {
-            playerName = team.Arqueros[0];
+            playerName = team.Arqueros.splice(0, 1).toString();
             playerPostion = 'Arqueros';
           } else if (team.Defensores.length > 0) {
-            playerName = team.Defensores.Arqueros[0];
+            playerName = team.Defensores.splice(0, 1).toString();
             playerPostion = 'Defensores';
           } else if (team.Mediocampistas.length > 0) {
-            playerName = team.Mediocampistas.Arqueros[0];
+            playerName = team.Mediocampistas.splice(0, 1).toString();
             playerPostion = 'Mediocampistas';
           } else if (team.Delanteros.length > 0) {
-            playerName = team.Delanteros.Arqueros[0];
+            playerName = team.Delanteros.splice(0, 1).toString();
             playerPostion = 'Delanteros';
           } else {
             break;
@@ -40,9 +40,10 @@ module.exports = {
         }
       }
       teamIdCounter++;
+      // await queryInterface.bulkInsert('Players', player, {});
     });
 
-    await queryInterface.bulkInsert('Players', player, {});
+    await queryInterface.bulkInsert('Players', await player, {});
   },
 
   async down(queryInterface, Sequelize) {
