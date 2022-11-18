@@ -1,0 +1,36 @@
+.general {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+label {
+  margin: 10px
+}
+
+.boton {
+    margin: 10px;
+    background-color: lightcoral;
+    border-color: lightcoral;
+    border-radius: 10px;
+    padding: 5px
+}
+
+.boton:hover {
+  background-color: crimson;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.accountdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  margin: 5px;
+}
