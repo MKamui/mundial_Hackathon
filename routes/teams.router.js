@@ -1,7 +1,6 @@
 const express = require('express');
 
 const validatorHandler = require('./../middlewares/validator.handler');
-
 //Estos son los esquemas para validar los datos.
 const { createProductSchema, updateProductSchema, getProductSchema } = require('./../schemas/product.schema');
 
@@ -20,14 +19,15 @@ router.get('/team-vs-team', async (req, res) => {
 
   const { team1, team2 } = req.query;
 
-  if (req.team1 == null || req.team2 == null || req.team1 == "" || req.team2 == "" ) {
-    res.send('noooo');
-  }
+  // if (req.team1 == null || req.team2 == null || req.team1 == "" || req.team2 == "" ) {
 
-  res.json({
-    team1,
-    team2
-  })
+
+  // }
+
+  // res.json({
+  //   team1,
+  //   team2
+  // })
 
 
   // const products = await service.find();
