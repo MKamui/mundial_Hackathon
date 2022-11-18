@@ -17,6 +17,7 @@ function routerApi(app) {
   app.use('/teams', teamsRouter);
   app.use('/api/users', usersRouter);
   app.use('/votes', votesRouter);
+  app.use('/matches', votesRouter);
 
 
   // router.use('/products', productsRouter);

@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { Team } = require('../models');
+const { Team, Match, Vote } = require('../models');
 
 
 const validatorHandler = require('./../middlewares/validator.handler');
@@ -32,25 +32,44 @@ router.get('/', async (req, res) => {
 
 });
 
+// http://localhost:3030/teams/games-of-this-team?id=3
+
+router.get('/games-of-this-team', async (req, res) => {
+
+  const { id } = req.query;
+
+  let matchesAsHost = await Match.findAll({ where: { home: id } });
+  let matchesAsVisitor = await Match.findAll({ where: { visitor: id } });
+
+  res.json({
+      "status":200,
+      "message":"Estos son los partidos de este equipo",
+
+      "data":{
+          "matches":{
+            matchesAsHost,
+            matchesAsVisitor
+          }
+      },
+  });
+});
+
+// http://localhost:3030/teams/team-vs-team?team1=2&team2=3
+
 router.get('/team-vs-team', async (req, res) => {
 
   const { team1, team2 } = req.query;
 
+  let votesForTeam1 = await Vote.findAndCountAll({where:{ team_id:team1 }})
+  let votesForTeam2 = await Vote.findAndCountAll({where:{ team_id:team2 }})
 
+  res.json({
 
-  // if (req.team1 == null || req.team2 == null || req.team1 == "" || req.team2 == "" ) {
+    votesForTeam1,
+    votesForTeam2
 
+  })
 
-  // }
-
-  // res.json({
-  //   team1,
-  //   team2
-  // })
-
-
-  // const products = await service.find();
-  // res.json(products);
 });
 
 
@@ -60,20 +79,24 @@ router.get('/filter', (req, res) => {
   res.send('Yo soy un filter');
 });
 
-// router.get('/:id',
-//   validatorHandler(getProductSchema, 'params'),
-//   async (req, res, next) => {
-//     try {
-//       const { id } = req.params;
-//       const product = await service.findOne(id);
-//       res.json(product);
-//     } catch (error) {
-//       next(error);
-//     }
-//   }
-// );
 
+router.get('/:id', async (req, res)=>{
+  const { id } = req.params;
+  await Team.findByPk(id)
+  .then(data => {
 
+    res.json({
+        "status":200,
+        "message":"Equipo",
+
+        "data":{
+            "team":data,
+        }
+
+      })
+
+  });
+});
 
 router.post('/',
   validatorHandler(createProductSchema, 'body'),
