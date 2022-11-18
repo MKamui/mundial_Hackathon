@@ -13,7 +13,7 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
             <Nav.Link href="#pricing">Contacto</Nav.Link>
            <NavDropdown title="Instancias" id="basic-nav-dropdown" className='drop'>
             <NavDropdown.Item href="/fasedegrupos"><p>Fase de Grupos</p></NavDropdown.Item>
