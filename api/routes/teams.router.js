@@ -79,6 +79,7 @@ router.get('/filter', (req, res) => {
   res.send('Yo soy un filter');
 });
 
+
 router.get('/:id', async (req, res)=>{
   const { id } = req.params;
   await Team.findByPk(id)
