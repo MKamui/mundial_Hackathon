@@ -28,9 +28,7 @@ function FaseDeGrupos() {
         <ListGroup.Item>Ecuador</ListGroup.Item>
 
       </ListGroup>
-      <Card.Body>
-        <Button variant="primary">Fixture</Button>
-      </Card.Body>
+     
     </Card>
     <Card style={{ width: '18rem', margin:"2rem" }}>
       <Card.Img style={{height: "10rem"}} variant="top" src={B} />
@@ -45,9 +43,6 @@ function FaseDeGrupos() {
         <ListGroup.Item>Gales</ListGroup.Item>
 
       </ListGroup>
-      <Card.Body>
-        <Button variant="primary">Fixture</Button>
-      </Card.Body>
     </Card>
     <Card style={{ width: '18rem', margin:"2rem" }}>
       <Card.Img style={{height: "10rem"}} variant="top" src={C} />
@@ -62,9 +57,6 @@ function FaseDeGrupos() {
         <ListGroup.Item>Polonia</ListGroup.Item>
 
       </ListGroup>
-      <Card.Body>
-        <Button variant="primary">Fixture</Button>
-      </Card.Body>
     </Card>
     <Card style={{ width: '18rem', margin:"2rem" }}>
       <Card.Img style={{height: "10rem"}} variant="top" src={D} />
@@ -79,9 +71,6 @@ function FaseDeGrupos() {
         <ListGroup.Item>Tunez</ListGroup.Item>
 
       </ListGroup>
-      <Card.Body>
-        <Button variant="primary">Fixture</Button>
-      </Card.Body>
     </Card>
     </div>
     <div style={{display:"flex",flexDirection:"row" }}>
@@ -98,9 +87,6 @@ function FaseDeGrupos() {
         <ListGroup.Item>Japón</ListGroup.Item>
 
       </ListGroup>
-      <Card.Body>
-        <Button variant="primary">Fixture</Button>
-      </Card.Body>
     </Card>
     <Card style={{ width: '18rem', margin:"2rem" }}>
       <Card.Img style={{height: "10rem"}} variant="top" src={F} />
@@ -115,9 +101,6 @@ function FaseDeGrupos() {
         <ListGroup.Item>Croacia</ListGroup.Item>
 
       </ListGroup>
-      <Card.Body>
-        <Button variant="primary">Fixture</Button>
-      </Card.Body>
     </Card>
     <Card style={{ width: '18rem', margin:"2rem" }}>
       <Card.Img style={{height: "10rem"}} variant="top" src={G} />
@@ -132,9 +115,6 @@ function FaseDeGrupos() {
         <ListGroup.Item>Camerún</ListGroup.Item>
 
       </ListGroup>
-      <Card.Body>
-        <Button variant="primary">Fixture</Button>
-      </Card.Body>
     </Card>
     <Card style={{ width: '18rem', margin:"2rem" }}>
       <Card.Img style={{height: "10rem"}} variant="top" src={H} />
@@ -149,9 +129,6 @@ function FaseDeGrupos() {
         <ListGroup.Item>Corea del Sur</ListGroup.Item>
 
       </ListGroup>
-      <Card.Body>
-        <Button variant="primary">Fixture</Button>
-      </Card.Body>
     </Card>
     </div>
     </>

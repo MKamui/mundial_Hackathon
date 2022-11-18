@@ -14,6 +14,9 @@
     padding-top: 10px;
     color: white;
 }
+.navH a:hover{
+    color: rgb(56, 28, 28);
+}
 .drop a{
     color: rgb(255, 255, 255);
 }
