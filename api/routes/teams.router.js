@@ -1,5 +1,8 @@
 const express = require('express');
 
+const { Team } = require('../models');
+
+
 const validatorHandler = require('./../middlewares/validator.handler');
 //Estos son los esquemas para validar los datos.
 const { createProductSchema, updateProductSchema, getProductSchema } = require('./../schemas/product.schema');
@@ -11,13 +14,29 @@ const router = express.Router();
 
 //Esta es la ruta raíz, sería el controlador encargado de manejar a /api/teams
 router.get('/', async (req, res) => {
-  // const products = await service.find();
-  // res.json(products);
+
+  await Team.findAll()
+          .then(data => {
+
+            res.json({
+                "status":200,
+                "message":"Equipos",
+
+                "data":{
+                    "teams":data,
+                }
+
+              })
+
+          });
+
 });
 
 router.get('/team-vs-team', async (req, res) => {
 
   const { team1, team2 } = req.query;
+
+
 
   // if (req.team1 == null || req.team2 == null || req.team1 == "" || req.team2 == "" ) {
 
