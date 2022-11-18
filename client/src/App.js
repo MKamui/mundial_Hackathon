@@ -1,3 +1,5 @@
+import "./App.css";
+import Error from "./components/Error";
 import './App.css';
 import React from 'react';
 import Footer from "./components/Footer/Footer";
@@ -18,6 +20,11 @@ import Teams from './components/Teams/Teams';
 import Detail from './components/detalle/detalle';
 
 function App() {
+  let data = {
+    status: 403,
+    description: "Error",
+  };
+  
   return (
     <div>
       <AuthContextProvider>

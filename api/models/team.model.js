@@ -18,6 +18,14 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,
       });
 
+      Team.belongsToMany(models.Team, {
+        as:'matchesOfTheTeam',
+        through: 'matches',
+        foreignKey: 'home',
+        otherKey: 'visitor',
+        timestamps: false,
+      });
+
     }
   }
   Team.init({

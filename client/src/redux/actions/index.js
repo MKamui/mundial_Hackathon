@@ -1,16 +1,16 @@
 import axios from "axios";
-export const GET_TEAMS="GET_TEAMS"
-export const GET_DETAIL="GET_DETAIL"
+export const GET_TEAMS = "GET_TEAMS";
+export const GET_DETAIL = "GET_DETAIL";
 
-export function getTeams(){
-    return async function(dispatch){
-        var info=await axios.get("http://localhost:3030/teams")
-        console.log(info)
-        return dispatch({
-            type:GET_TEAMS,
-            payload:info.data
-        })
-    }
+export function getTeams() {
+  return async function (dispatch) {
+    var info = await axios.get("http://localhost:3030/teams");
+    console.log(info);
+    return dispatch({
+      type: GET_TEAMS,
+      payload: info.data,
+    });
+  };
 }
 
 export function getDetail(id){
@@ -25,4 +25,5 @@ export function getDetail(id){
             console.log(err)
         }
     }
-}
+  };
+
