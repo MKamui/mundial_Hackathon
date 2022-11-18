@@ -1,31 +1,10 @@
 const express = require('express');
-
-const { User, Team, Vote } = require('../models/index');
-
 const router = express.Router();
 
+// Controladores
+const AuthController = require('../controllers/AuthController')
 
-router.get('/', async (req, res) => {
-
-  const users = await User.findAll({
-    include: [Team]
-  }).then((res) => {
-    console.log(res);
-  });
-
-
-
-
-
-
-  // console.log(votes); // true
-
-
-  // res.json(votes);
-  //const userTest = userModel.findAll();
-});
-
-router.get('search')
-
+router.post('/signin', AuthController.signIn)
+router.post('/signup', AuthController.signUp)
 
 module.exports = router;

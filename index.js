@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 
+
 // Importamos todaslas rutas registradas
 const routerApi = require('./routes');
 
@@ -12,6 +13,7 @@ const port = 3030;
 
 //middleware para que todas las peticiones se parseen a JSON
 app.use(express.json());
+app.use(express.urlencoded({extended:false}))
 
 //Lista de urls permitidas para solucionar el problema de cors headers
 const whitelist = ['http://localhost:8080', 'https://myapp.co', 'http://localhost:3030'];
@@ -37,9 +39,6 @@ app.get('/', (req, res) => {
 });
 
 
-// app.get('/nueva-ruta', (req, res) => {
-//   res.send('Hola, soy una nueva ruta');
-// });
 
 //Se invocan todas las rutas declaradas
 routerApi(app);
