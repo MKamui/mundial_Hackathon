@@ -14,7 +14,7 @@ import H from "../img/grupo H.webp";
 function FaseDeGrupos() {
   return (
     <>
-    <div style={{display:"flex",flexDirection:"row" }}>
+    <div style={{display:"inline-flex",flexDirection:"row" }}>
     <Card style={{ width: '18rem', margin:"2rem" }}>
       <Card.Img style={{height: "10rem"}} variant="top" src={A} />
       <Card.Body>
@@ -73,7 +73,7 @@ function FaseDeGrupos() {
       </ListGroup>
     </Card>
     </div>
-    <div style={{display:"flex",flexDirection:"row" }}>
+    <div style={{display:"inline-flex",flexDirection:"row" }}>
     <Card style={{ width: '18rem', margin:"2rem" }}>
       <Card.Img style={{height: "10rem"}} variant="top" src={E} />
       <Card.Body>

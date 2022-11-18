@@ -6,36 +6,6 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PaginationT from "./Pagination";
 
-<<<<<<< HEAD
-export default function Teams() {
-  const dispatch = useDispatch();
-  const allTeams = useSelector((state) => state.teams);
-  console.log(allTeams);
-
-  useEffect(() => {
-    dispatch(getTeams());
-  }, [dispatch]);
-  console.log(allTeams);
-  return (
-    <div className="teams">
-      {allTeams?.map((e) => {
-        console.log(e.fifa_code);
-        return (
-          <fragment>
-            <Card
-              flag={e.flag}
-              name={e.name}
-              codigo={e.fifa_code}
-              grupo={e.group_id}
-              id={e.id}
-            />
-          </fragment>
-        );
-      })}
-    </div>
-  );
-}
-=======
 export default function Teams(){
     const dispatch=useDispatch()
     const allTeams=useSelector((state)=>state.teams);
@@ -82,4 +52,3 @@ export default function Teams(){
         </div>
     )
 }
->>>>>>> 30f21c5a77e84bdcba9ad08911637b14b9546c31
