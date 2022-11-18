@@ -16,11 +16,10 @@ export default function Detail(props){
             {
                 myTeam.length>0?
                 <div className="detail">
-                    <img src={myTeam[0].flag} />
                     <h1>Nombre</h1>
                     <h2>{myTeam[0].name}</h2>
                     <div className="p">
-                    <h3>Codigo</h3>
+                    <h3>Arqueros: </h3>
                     </div>
                 </div>: <p>loading</p>
 

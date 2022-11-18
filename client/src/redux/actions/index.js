@@ -16,7 +16,7 @@ export function getTeams(){
 export function getDetail(id){
     return async function(dispatch){
         try{
-            var json=await axios("http://localhost:3001/teams/"+id)
+            var json=await axios("http://localhost:3030/teams/"+id)
             return dispatch({
                 type:GET_DETAIL,
                 payload:json.data

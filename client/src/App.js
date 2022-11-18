@@ -33,7 +33,7 @@ function App() {
           <Route path='/octavos' element={<OctavosDeFinal/>}/>
           <Route path='/team' element={<Team />}/>
           <Route path='/equipos' element={<Teams />}/>
-          {/* <Route path='/detail/:id' component={Detail}/> */}
+          <Route path='/detail/:id' component={Detail}/>
         </Routes>
         <Footer/>
       </AuthContextProvider>
