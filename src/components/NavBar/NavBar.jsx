@@ -8,7 +8,7 @@ import "../../css/NavBar.css"
 function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" className='navH'>
-        <Navbar.Brand href="#home" className='titu'>Prode Mundial</Navbar.Brand>
+        <Navbar.Brand href="/" className='titu'>Prode Mundial</Navbar.Brand>
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -27,8 +27,8 @@ function NavBar() {
           </NavDropdown>
           </Nav>
           <Nav>
-            <Link to="/signin">Sign In</Link>
-            <Link to="/createaccount">Sign up</Link>
+            <Link to="/account">Account</Link>
+            <Link to="/createaccount">Create an account</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

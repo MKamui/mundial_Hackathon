@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import './App.css';
 import Footer from "./components/Footer/Footer";
 import {Route, Routes} from "react-router-dom";
 import Home from './components/Home/Home';
@@ -12,6 +11,9 @@ import ForgetPassword from './components/ForgetPassword'
 import Account from './components/Account';
 import NavBar from './components/NavBar/NavBar';
 import FaseDeGrupos from './components/FaseDeGrupos';
+import Protected from './components/Protected'
+import Team from './components/Team';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -23,9 +25,11 @@ function App() {
           <Route path="/signin" element={<SignIn/>} />
           <Route path="/createaccount" element={<CreateAccount/>} />
           <Route path="/forget" element={<ForgetPassword/>} />
-          <Route path='/account' element={<Account/>} />
+          <Route exact path='/account' element={<Protected><Account/></Protected>} />
           <Route path='*' element={<PageNotFound/>}/>
           <Route path='/fasedegrupos' element={<FaseDeGrupos />}/>
+          <Route path='/team' element={<Team />}/>
+          <Route path='/contact' element={<Contact />}/>
         </Routes>
         <Footer/>
       </AuthContextProvider>

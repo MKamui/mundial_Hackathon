@@ -34,7 +34,7 @@ const ForgetPassword = () => {
     }
 }
   return (
-    <div>
+    <div className='general'>
       <div>
         <div>
           <h1>Recover your password</h1>
@@ -44,9 +44,9 @@ const ForgetPassword = () => {
             <label>Email Address:</label>
             <input name='email' onChange={handleChanges} type="email" />
           </div>
-          <button onClick={handleSubmit}>Send Email</button>
         </form>
-        <Link to='/signin'><button>Back SignIn</button></Link>
+        <button onClick={handleSubmit} className="boton">Send Email</button>
+        <Link to='/signin'><button className="boton">Back SignIn</button></Link>
       </div>
     </div>
   )
