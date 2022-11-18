@@ -14,7 +14,6 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Link to="/">Home</Link>
-            <Nav.Link href="#pricing">Contacto</Nav.Link>
            <NavDropdown title="Instancias" id="basic-nav-dropdown" className='drop'>
             <NavDropdown.Item href="/fasedegrupos"><p>Fase de Grupos</p></NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2"><p>Octavos de Final</p></NavDropdown.Item>
@@ -27,8 +26,8 @@ function NavBar() {
           </NavDropdown>
           </Nav>
           <Nav>
-            <Link to="/account">Account</Link>
-            <Link to="/createaccount">Create an account</Link>
+            <Link to="/account">Cuenta</Link>
+            <Link to="/createaccount">Nueva cuenta</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

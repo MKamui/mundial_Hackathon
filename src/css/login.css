@@ -24,3 +24,13 @@ form {
   display: flex;
   justify-content: center;
 }
+
+.accountdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  margin: 5px;
+}

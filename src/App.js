@@ -13,7 +13,6 @@ import NavBar from './components/NavBar/NavBar';
 import FaseDeGrupos from './components/FaseDeGrupos';
 import Protected from './components/Protected'
 import Team from './components/Team';
-import Contact from './components/Contact';
 
 function App() {
   return (
@@ -29,7 +28,6 @@ function App() {
           <Route path='*' element={<PageNotFound/>}/>
           <Route path='/fasedegrupos' element={<FaseDeGrupos />}/>
           <Route path='/team' element={<Team />}/>
-          <Route path='/contact' element={<Contact />}/>
         </Routes>
         <Footer/>
       </AuthContextProvider>

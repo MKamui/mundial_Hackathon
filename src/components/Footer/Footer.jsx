@@ -28,7 +28,6 @@ export default function Footer(){
                     </div>
                     <div className={style.footer_content}>
                         <p><Link to="/team">El equipo</Link></p>
-                        <p><Link to="/contact">Contacto</Link></p>
                     </div>
                 </div> 
             </div>

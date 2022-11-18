@@ -23,7 +23,7 @@ const CreateAccount = () => {
     await createUser(user?.email, user?.password)
     Swal.fire({
       icon: 'success',
-      title: 'Welcome to Sneaker Paradise!',
+      title: 'Bienvenido a Prode Mundial!',
       showConfirmButton: false,
       timer: 2000
     })
@@ -35,28 +35,28 @@ const CreateAccount = () => {
       if (error.code === 'auth/email-already-in-use'){
         Swal.fire({
         icon: 'error',
-        title: 'Email already in use',
+        title: 'El email ya ha sido usado',
         showConfirmButton: false,
         timer: 2000
         })}
       if (error.code === 'auth/weak-password'){
         Swal.fire({
         icon: 'error',
-        title: 'The Password should be at least 6 characters',
+        title: 'La contraseña debe ser de mínimo 6 caracteres',
         showConfirmButton: false,
         timer: 2000
         })}
       if (error.code === 'auth/internal-error'){
         Swal.fire({
         icon: 'error',
-        title: 'Fill the password',
+        title: 'Llena la contraseña',
         showConfirmButton: false,
         timer: 2000
         })}
       if (error.code === 'auth/invalid-email'){
         Swal.fire({
         icon: 'error',
-        title: 'Use a valid email',
+        title: 'Usa un email valido',
         showConfirmButton: false,
         timer: 2000
         })}
@@ -66,21 +66,21 @@ const CreateAccount = () => {
   return (
     <div className='general'>
       <div>
-        <h1>Create an account</h1>
-        <p>Already have an account? <Link to='/signin'>Sign in.</Link></p>
+        <h1>Crea una cuenta</h1>
+        <p>Ya posees una cuenta? <Link to='/signin'>Ingresa.</Link></p>
       </div>
       <form>
         <div>
-          <label>Email Address:</label>
+          <label>Email:</label>
           <input name='email' onChange={handleChanges} type="email" />
         </div>
         <div>
-          <label>Password:</label>
+          <label>Contraseña:</label>
           <input name='password' onChange={handleChanges} type="password" />
         </div>
       </form>
-      <button onClick={handleSubmit} className="boton">Create account</button>
-      <Link to='/'><button className="boton">Back SignIn</button></Link>
+      <button onClick={handleSubmit} className="boton">Crea una cuenta</button>
+      <Link to='/'><button className="boton">Home</button></Link>
     </div>
   )
 }

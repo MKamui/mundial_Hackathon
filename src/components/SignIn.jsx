@@ -21,7 +21,7 @@ const SignIn = () => {
     await signIn(userAccount.email, userAccount.password)
     Swal.fire({
       icon: 'success',
-      title: 'Welcome again!',
+      title: 'Bienvenido nuevamente!',
       showConfirmButton: false,
       timer: 2000
     })
@@ -30,28 +30,28 @@ const SignIn = () => {
       if (error.code === 'auth/user-not-found'){
         Swal.fire({
         icon: 'error',
-        title: 'User not found',
+        title: 'Usuario no encontrado',
         showConfirmButton: false,
         timer: 2000
         })}
       if (error.code === 'auth/wrong-password'){
         Swal.fire({
         icon: 'error',
-        title: 'Wrong Password',
+        title: 'Contraseña equivocada',
         showConfirmButton: false,
         timer: 2000
         })}
       if (error.code === 'auth/internal-error'){
         Swal.fire({
         icon: 'error',
-        title: 'Fill the password',
+        title: 'Llena la contraseña',
         showConfirmButton: false,
         timer: 2000
         })}
       if (error.code === 'auth/invalid-email'){
         Swal.fire({
         icon: 'error',
-        title: 'Use a valid email',
+        title: 'Usa un email valido',
         showConfirmButton: false,
         timer: 2000
         })}
@@ -62,21 +62,21 @@ const SignIn = () => {
     <div className="general">
       <div>
         <div>
-          <h1>Sign in to your profile</h1>
-          <p>Don't have an account yet? <Link to='/createaccount'>Create account.</Link></p>
+          <h1>Ingresa en tu cuenta</h1>
+          <p>No tienes una cuenta aún? <Link to='/createaccount'>Crea una cuenta.</Link></p>
         </div>
         <form>
           <div>
-            <label>Email Address:</label>
+            <label>Email:</label>
             <input name='email' onChange={handleChanges} type="email" />
           </div>
           <div>
-            <label>Password:</label>
+            <label>Contraseña:</label>
             <input name='password' onChange={handleChanges} type="password" />
           </div>
         </form>
-          <button onClick={handleSubmit} className='boton'>Sign In</button>
-          <Link to='/forget'><button className='boton'>Forget password?</button></Link>
+          <button onClick={handleSubmit} className='boton'>Ingresa</button>
+          <Link to='/forget'><button className='boton'>Olvidaste la contraseña?</button></Link>
       </div>
     </div>
   )

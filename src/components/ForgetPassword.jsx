@@ -18,7 +18,7 @@ const ForgetPassword = () => {
       await sendPasswordResetEmail(auth, email)
       Swal.fire({
       icon: 'success',
-      title: 'Email send',
+      title: 'Email enviado',
       showConfirmButton: false,
       timer: 2000
       })
@@ -27,7 +27,7 @@ const ForgetPassword = () => {
       if (error.code === 'auth/user-not-found'){
         Swal.fire({
         icon: 'error',
-        title: 'User not found',
+        title: 'Usuario no encontrado',
         showConfirmButton: false,
         timer: 2000
         })}
@@ -37,16 +37,16 @@ const ForgetPassword = () => {
     <div className='general'>
       <div>
         <div>
-          <h1>Recover your password</h1>
+          <h1>Recupera tu contraseña</h1>
         </div>
         <form>
           <div>
-            <label>Email Address:</label>
+            <label>Email:</label>
             <input name='email' onChange={handleChanges} type="email" />
           </div>
         </form>
-        <button onClick={handleSubmit} className="boton">Send Email</button>
-        <Link to='/signin'><button className="boton">Back SignIn</button></Link>
+        <button onClick={handleSubmit} className="boton">Envia Email</button>
+        <Link to='/signin'><button className="boton">Regresa a Ingresar</button></Link>
       </div>
     </div>
   )
