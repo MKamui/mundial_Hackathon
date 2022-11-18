@@ -32,6 +32,8 @@ router.get('/', async (req, res) => {
 
 });
 
+// http://localhost:3030/teams/games-of-this-team?id=3
+
 router.get('/games-of-this-team', async (req, res) => {
 
   const { id } = req.query;
@@ -52,6 +54,7 @@ router.get('/games-of-this-team', async (req, res) => {
   });
 });
 
+// http://localhost:3030/teams/team-vs-team?team1=2&team2=3
 router.get('/team-vs-team', async (req, res) => {
 
   const { team1, team2 } = req.query;
