@@ -17,7 +17,7 @@ function NavBar() {
             <Nav.Link href="#pricing">Contacto</Nav.Link>
            <NavDropdown title="Equipo" id="basic-nav-dropdown" className='drop'>
             <NavDropdown.Item href="/fasedegrupos"><p>Fase de Grupos</p></NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2"><p>Octavos de Final</p></NavDropdown.Item>
+            <NavDropdown.Item href="/octavos"><p>Octavos de Final</p></NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3"><p>Cuartos de Final</p></NavDropdown.Item>
             <NavDropdown.Item href="#action/3.4"><p>Semifinal</p></NavDropdown.Item>
             <NavDropdown.Item href="#action/3.4"><p>Final</p></NavDropdown.Item>

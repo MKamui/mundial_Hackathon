@@ -5,7 +5,7 @@ import foto from "../img/cruces octavos.jpg"
 function OctavosDeFinal() {
   return (
     <div>
-        <Image src={foto}/>
+        <Image style={{width: "100%", height: "100%"}} src={foto}/>
     </div>
   )
 }
