@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { Team, Match } = require('../models');
+const { Team, Match, Vote } = require('../models');
 
 
 const validatorHandler = require('./../middlewares/validator.handler');
@@ -49,36 +49,23 @@ router.get('/games-of-this-team', async (req, res) => {
             matchesAsVisitor
           }
       },
-
-
   });
-
-
-
-
 });
-
-
 
 router.get('/team-vs-team', async (req, res) => {
 
   const { team1, team2 } = req.query;
 
+  let votesForTeam1 = await Vote.findAndCountAll({where:{ team_id:team1 }})
+  let votesForTeam2 = await Vote.findAndCountAll({where:{ team_id:team2 }})
 
+  res.json({
 
-  // if (req.team1 == null || req.team2 == null || req.team1 == "" || req.team2 == "" ) {
+    votesForTeam1,
+    votesForTeam2
 
+  })
 
-  // }
-
-  // res.json({
-  //   team1,
-  //   team2
-  // })
-
-
-  // const products = await service.find();
-  // res.json(products);
 });
 
 
